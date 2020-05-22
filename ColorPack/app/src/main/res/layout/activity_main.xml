@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tooltipText="ColorPack"
+        app:title="ColorPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/primetext"
+
+            android:textColor="#FFF"
+            android:textSize="23dp"
+            android:layout_centerInParent="true"
+            ></EditText>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relative1"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/primesec"
+            android:textColor="#FFF"
+
+            android:textSize="23dp"
+            android:layout_centerInParent="true"
+            ></EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relative2"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/primethird"
+            android:textColor="#FFF"
+
+            android:textSize="23dp"
+
+            android:layout_centerInParent="true"
+            ></EditText>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative2"
+        app:layout_constraintVertical_bias="0.759"></Button>
+
+    <Button
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0.622"></Button>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@id/relative3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="90dp"
+        android:text="Set"
+        android:id="@+id/set"
+        ></Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+
+
+        app:layout_constraintTop_toBottomOf="@id/relative3"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Remove"
+        android:id="@+id/remove"
+        ></Button>
+    <SeekBar
+        android:id="@+id/seek1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:max="255"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relative3"></SeekBar>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:max="255"
+        android:visibility="gone"
+
+        android:id="@+id/seek2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek1"></SeekBar>
+
+    <SeekBar
+        android:id="@+id/seek3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:padding="12dp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek2"
+        app:layout_constraintVertical_bias="0.0"></SeekBar>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
