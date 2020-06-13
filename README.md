@@ -1,2 +1,2 @@
 # ColorPack
-Android Application which lets you to get best color combination from our algorithm and provides you freedom to adjust it.
+Android Application which lets you to choose your Color combination such as Primary, Secondary, Tertiary with Hex code and provide you freedom to customize it.
